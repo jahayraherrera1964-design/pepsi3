@@ -1,0 +1,344 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PEPSI | Vive el momento</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+
+<!-- BARRA DE PROMOCIONES -->
+<div class="topbar">
+    <span>🔥 ¡PROMOCIONES ESPECIALES!</span>
+    <span>Descubre el mundo Pepsi y disfruta cada momento</span>
+</div>
+
+<!-- NAVEGACIÓN -->
+<header class="navbar">
+    <a href="#inicio" class="logo">
+        <span class="pepsi-ball"></span>
+        <span>PEPSI</span>
+    </a>
+
+    <nav class="nav-links">
+        <a href="#inicio">Inicio</a>
+        <a href="#productos">Productos</a>
+        <a href="#historia">Nuestra historia</a>
+        <a href="#marketing">Experiencias</a>
+    </nav>
+
+    <div class="nav-actions">
+        <button id="searchBtn" aria-label="Buscar">
+            <i class="fa-solid fa-magnifying-glass"></i>
+        </button>
+        <button id="cartBtn" class="cart-button" aria-label="Carrito">
+            <i class="fa-solid fa-bag-shopping"></i>
+            <span id="cartCount">0</span>
+        </button>
+        <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+    </div>
+</header>
+
+<!-- BUSCADOR -->
+<div class="search-panel" id="searchPanel">
+    <input type="text" id="searchInput"
+           placeholder="¿Qué Pepsi estás buscando?">
+    <button id="closeSearch"><i class="fa-solid fa-xmark"></i></button>
+</div>
+
+<main>
+
+<!-- PORTADA -->
+<section class="hero" id="inicio">
+    <div class="hero-content">
+        <span class="eyebrow">EL SABOR DE UNA GENERACIÓN</span>
+        <h1>VIVE EL<br><span>MOMENTO</span></h1>
+        <p>Descubre el universo Pepsi. Un mundo de sabor,
+           energía y experiencias que nunca se detienen.</p>
+
+        <div class="hero-buttons">
+            <a href="#productos" class="btn-primary">EXPLORAR PRODUCTOS</a>
+            <a href="#historia" class="btn-outline">CONOCE PEPSI</a>
+        </div>
+
+        <div class="hero-social">
+            <span>REFRESCA TU MUNDO</span>
+            <span class="hero-line"></span>
+            <span>DESDE 1893</span>
+        </div>
+    </div>
+
+    <div class="hero-image">
+        <div class="hero-glow"></div>
+        <div class="hero-can">
+            <div class="can-top"></div>
+            <div class="can-logo"></div>
+            <strong>pepsi</strong>
+            <small>COLA</small>
+        </div>
+        <div class="floating-text">THAT'S WHAT<br>I LIKE!</div>
+        <span class="bubble bubble-one"></span>
+        <span class="bubble bubble-two"></span>
+        <span class="bubble bubble-three"></span>
+    </div>
+</section>
+
+<!-- BENEFICIOS -->
+<section class="benefits">
+    <div><i class="fa-solid fa-truck-fast"></i>
+        <span>Descubre nuestros productos</span></div>
+    <div><i class="fa-solid fa-star"></i>
+        <span>Una marca reconocida mundialmente</span></div>
+    <div><i class="fa-solid fa-bolt"></i>
+        <span>Innovación y experiencias</span></div>
+</section>
+
+<!-- CATEGORÍAS -->
+<section class="section categories">
+    <div class="section-heading">
+        <div>
+            <span class="eyebrow blue-text">ENCUENTRA TU FAVORITA</span>
+            <h2>Explora nuestro <span>universo</span></h2>
+        </div>
+        <p>Una variedad para diferentes gustos y preferencias.</p>
+    </div>
+
+    <div class="category-grid">
+        <button class="category-card" data-filter="clasica">
+            <span class="category-icon">🥤</span>
+            <strong>Pepsi clásica</strong>
+            <small>El sabor original</small>
+        </button>
+
+        <button class="category-card" data-filter="zero">
+            <span class="category-icon">⚡</span>
+            <strong>Zero Sugar</strong>
+            <small>Sin azúcar</small>
+        </button>
+
+        <button class="category-card" data-filter="diet">
+            <span class="category-icon">❄️</span>
+            <strong>Diet Pepsi</strong>
+            <small>Una alternativa dietética</small>
+        </button>
+
+        <button class="category-card" data-filter="cereza">
+            <span class="category-icon">🍒</span>
+            <strong>Wild Cherry</strong>
+            <small>Toque de cereza</small>
+        </button>
+    </div>
+</section>
+
+<!-- PRODUCTOS -->
+<section class="section products-section" id="productos">
+    <div class="section-heading">
+        <div>
+            <span class="eyebrow blue-text">DESCUBRE TU FAVORITA</span>
+            <h2>Nuestros <span>productos</span></h2>
+        </div>
+        <span class="product-count" id="productCount">4 productos</span>
+    </div>
+
+    <div class="catalog-tools">
+        <div class="filter-buttons">
+            <button class="filter-btn active" data-filter="todos">Todos</button>
+            <button class="filter-btn" data-filter="clasica">Clásica</button>
+            <button class="filter-btn" data-filter="zero">Zero</button>
+            <button class="filter-btn" data-filter="diet">Diet</button>
+            <button class="filter-btn" data-filter="cereza">Cereza</button>
+        </div>
+
+        <select id="sortProducts" aria-label="Ordenar productos">
+            <option value="default">Ordenar productos</option>
+            <option value="low">Menor precio</option>
+            <option value="high">Mayor precio</option>
+            <option value="name">Nombre A-Z</option>
+        </select>
+    </div>
+
+    <div class="product-grid" id="productGrid"></div>
+</section>
+
+<!-- PUBLICIDAD -->
+<section class="campaign" id="marketing">
+    <div class="campaign-content">
+        <span class="eyebrow">PEPSI MOMENTS</span>
+        <h2>NO ES SOLO<br>UNA BEBIDA.<br><span>ES UNA EXPERIENCIA.</span></h2>
+        <p>Música, deporte, entretenimiento y momentos
+           que conectan a las personas.</p>
+        <a href="#historia" class="btn-primary">DESCUBRE MÁS</a>
+    </div>
+    <div class="campaign-art">
+        <div class="campaign-circle"></div>
+        <div class="campaign-label">FEEL<br>THE<br>ENERGY</div>
+    </div>
+</section>
+
+<!-- HISTORIA -->
+<section class="section history" id="historia">
+    <div class="history-heading">
+        <span class="eyebrow blue-text">MÁS DE UN SIGLO DE HISTORIA</span>
+        <h2>Una marca que nunca<br><span>deja de evolucionar</span></h2>
+        <p>Desde sus inicios hasta convertirse en una marca global,
+           Pepsi ha transformado su identidad a través del tiempo.</p>
+    </div>
+
+    <div class="timeline">
+        <div class="timeline-item">
+            <span>1893</span>
+            <h3>Brad's Drink</h3>
+            <p>Caleb Bradham crea la bebida.</p>
+        </div>
+        <div class="timeline-item">
+            <span>1898</span>
+            <h3>Pepsi-Cola</h3>
+            <p>La bebida adopta su nombre.</p>
+        </div>
+        <div class="timeline-item">
+            <span>1965</span>
+            <h3>PepsiCo</h3>
+            <p>Pepsi-Cola y Frito-Lay se unen.</p>
+        </div>
+        <div class="timeline-item">
+            <span>2023</span>
+            <h3>Nueva identidad</h3>
+            <p>La marca presenta una nueva imagen.</p>
+        </div>
+    </div>
+</section>
+
+<!-- PERSONALIDAD -->
+<section class="personality">
+    <div class="personality-image">
+        <div class="personality-circle">P</div>
+    </div>
+    <div class="personality-content">
+        <span class="eyebrow">IDENTIDAD PEPSI</span>
+        <h2>Una marca con<br><span>personalidad propia</span></h2>
+
+        <div class="personality-point">
+            <i class="fa-solid fa-bolt"></i>
+            <div><strong>Dinámica</strong>
+            <p>Comunicación llena de energía.</p></div>
+        </div>
+
+        <div class="personality-point">
+            <i class="fa-solid fa-heart"></i>
+            <div><strong>Cercana</strong>
+            <p>Conexión con la cultura popular.</p></div>
+        </div>
+
+        <div class="personality-point">
+            <i class="fa-solid fa-star"></i>
+            <div><strong>Contemporánea</strong>
+            <p>Una identidad que evoluciona.</p></div>
+        </div>
+    </div>
+</section>
+
+<!-- ANÁLISIS -->
+<section class="section analysis">
+    <div class="section-heading">
+        <div>
+            <span class="eyebrow blue-text">CONOCE LA MARCA</span>
+            <h2>Pepsi en el <span>mercado</span></h2>
+        </div>
+    </div>
+
+    <div class="analysis-grid">
+        <div class="analysis-card strength">
+            <i class="fa-solid fa-trophy"></i>
+            <h3>Fortalezas</h3>
+            <p>Reconocimiento global y trayectoria.</p>
+        </div>
+        <div class="analysis-card opportunity">
+            <i class="fa-solid fa-lightbulb"></i>
+            <h3>Oportunidades</h3>
+            <p>Innovación y adaptación a preferencias.</p>
+        </div>
+        <div class="analysis-card challenge">
+            <i class="fa-solid fa-chart-line"></i>
+            <h3>Desafíos</h3>
+            <p>Competencia intensa y cambios de consumo.</p>
+        </div>
+        <div class="analysis-card risk">
+            <i class="fa-solid fa-triangle-exclamation"></i>
+            <h3>Riesgos</h3>
+            <p>Presión regulatoria y debate sobre bebidas azucaradas.</p>
+        </div>
+    </div>
+</section>
+
+<!-- NEWSLETTER -->
+<section class="newsletter">
+    <div>
+        <span class="eyebrow">MANTENTE CONECTADO</span>
+        <h2>¡El mundo Pepsi<br>te espera!</h2>
+        <p>Suscríbete para recibir novedades y promociones.</p>
+    </div>
+    <form id="newsletterForm">
+        <input type="email" id="emailInput"
+               placeholder="Ingresa tu correo electrónico" required>
+        <button type="submit">SUSCRIBIRME <i class="fa-solid fa-arrow-right"></i></button>
+    </form>
+</section>
+
+</main>
+
+<!-- PIE DE PÁGINA -->
+<footer class="footer">
+    <div class="footer-brand">
+        <div class="logo"><span class="pepsi-ball"></span> PEPSI</div>
+        <p>Más que una bebida, una marca que evoluciona.</p>
+    </div>
+
+    <div class="footer-links">
+        <a href="#inicio">Inicio</a>
+        <a href="#productos">Productos</a>
+        <a href="#historia">Historia</a>
+        <a href="#marketing">Marketing</a>
+    </div>
+
+    <div class="footer-social">
+        <a href="https://www.facebook.com/Pepsi" target="_blank" rel="noopener"><i class="fa-brands fa-facebook"></i></a>
+        <a href="https://www.instagram.com/pepsi/" target="_blank" rel="noopener"><i class="fa-brands fa-instagram"></i></a>
+        <a href="https://www.youtube.com/user/Pepsi" target="_blank" rel="noopener"><i class="fa-brands fa-youtube"></i></a>
+    </div>
+
+    <p class="copyright">Proyecto académico independiente · 2026</p>
+</footer>
+
+<!-- CARRITO LATERAL -->
+<div class="overlay" id="overlay"></div>
+<aside class="cart-panel" id="cartPanel">
+    <div class="cart-header">
+        <h2>Tu carrito <i class="fa-solid fa-bag-shopping"></i></h2>
+        <button id="closeCart" aria-label="Cerrar carrito">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+    </div>
+    <div id="cartItems" class="cart-items">
+        <p class="empty-cart">Tu carrito está vacío.</p>
+    </div>
+    <div class="cart-total">
+        <div><span>Total</span><strong id="cartTotal">S/ 0.00</strong></div>
+        <button id="checkoutBtn">FINALIZAR PEDIDO</button>
+        <small>Demostración académica. No se procesan pagos reales.</small>
+    </div>
+</aside>
+
+<!-- MENSAJES -->
+<div id="toast" class="toast"></div>
+
+<script src="script.js"></script>
+</body>
+</html>
